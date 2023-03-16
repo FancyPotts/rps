@@ -7,5 +7,5 @@
 - &#x2611; create function to play a round of game
   - &#x2611; user input vs computer
   - &#x2611; return win, lose, draw based on input
-- create function to play 5 rounds
-  - best 3 out of 5
+- &#x2611; create function to play 5 rounds
+- Modify function to continue game until one side wins at least 3 games.

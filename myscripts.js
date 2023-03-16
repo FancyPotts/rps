@@ -18,7 +18,6 @@ function playFiveRounds() {
         } else {
             console.log("Draw!");
         }
- 
     }
     if (playerTally > computerTally) {
         console.log("Congratulations, you won by " + (playerTally - computerTally))
