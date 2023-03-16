@@ -29,10 +29,8 @@ function playFirstToThree() {
     console.log(outcome);
     if (outcome === "You lose!") {
       computerTally++;
-      console.log(computerTally);
     } else if (outcome === "You win!") {
       playerTally++;
-      console.log(playerTally);
     }
   }
   if (playerTally > computerTally) {
