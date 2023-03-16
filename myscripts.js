@@ -39,6 +39,7 @@ function playFirstToThree() {
       playerTally++;
     }
   }
+  // When were the rock puns the most funny?... The stone age!
   if (playerTally > computerTally) {
     console.log("Congratulations, you won by " + (playerTally - computerTally));
   } else {

@@ -11,3 +11,4 @@
 - &#x2611; function to continue game until one side wins at least 3 games.
 - &#x2611; to change input to all lower-case.
 - Continue to ask for input if input is other than what is listed in array.
+- &#x2611; Leave a comment with a punny joke. &#128077; Can you find it?
