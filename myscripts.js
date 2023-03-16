@@ -3,14 +3,13 @@ function game() {
   const playerSelection = prompt(
     "Choose your weapon: rock, paper or scissors."
   );
-  const computerSelection =
-    choices[Math.floor(Math.random() * choices.length)];
+  const computerSelection = choices[Math.floor(Math.random() * choices.length)];
   if (
-    (playerSelection === "rock" && computerSelection === "paper") ||
-    (playerSelection === "paper" && computerSelection === "scissors") ||
-    (playerSelection === "scissors" && computerSelection === "rock")
+    playerSelection === computerSelection ||
+    playerSelection === computerSelection ||
+    playerSelection === computerSelection
   ) {
-    return "Draw!";
+    return "Draw! Try again!";
   } else if (
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper") ||
@@ -18,23 +17,20 @@ function game() {
   ) {
     return "You win!";
   } else {
-    return "Draw!";
+    return "You lose!";
   }
 }
-
 
 function playFirstToThree() {
   let playerTally = 0;
   let computerTally = 0;
   while (playerTally !== 3 && computerTally !== 3) {
     let outcome = game();
-    console.log(outcome)
-    if (outcome === "You lose!"
-    ) {
+    console.log(outcome);
+    if (outcome === "You lose!") {
       computerTally++;
       console.log(computerTally);
-    } else if (outcome === "You win!"
-    ) {
+    } else if (outcome === "You win!") {
       playerTally++;
       console.log(playerTally);
     }
