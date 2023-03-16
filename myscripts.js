@@ -1,30 +1,42 @@
+function game() {
+  const choices = ["rock", "paper", "scissors"];
+  const playerSelection = prompt(
+    "Choose your weapon: rock, paper or scissors."
+  );
+  const computerSelection =
+    choices[Math.floor(Math.random() * choices.length)];
+  if (
+    (playerSelection === "rock" && computerSelection === "paper") ||
+    (playerSelection === "paper" && computerSelection === "scissors") ||
+    (playerSelection === "scissors" && computerSelection === "rock")
+  ) {
+    return "Draw!";
+  } else if (
+    (playerSelection === "paper" && computerSelection === "rock") ||
+    (playerSelection === "scissors" && computerSelection === "paper") ||
+    (playerSelection === "rock" && computerSelection === "scissors")
+  ) {
+    return "You win!";
+  } else {
+    return "Draw!";
+  }
+}
+
+
 function playFirstToThree() {
   let playerTally = 0;
   let computerTally = 0;
-
   while (playerTally !== 3 && computerTally !== 3) {
-    const choices = ["rock", "paper", "scissors"];
-    const playerSelection = prompt(
-      "Choose your weapon: rock, paper or scissors."
-    );
-    const computerSelection =
-      choices[Math.floor(Math.random() * choices.length)];
-    if (
-      (playerSelection === "rock" && computerSelection === "paper") ||
-      (playerSelection === "paper" && computerSelection === "scissors") ||
-      (playerSelection === "scissors" && computerSelection === "rock")
+    let outcome = game();
+    console.log(outcome)
+    if (outcome === "You lose!"
     ) {
-      console.log("You lose!");
       computerTally++;
-    } else if (
-      (playerSelection === "paper" && computerSelection === "rock") ||
-      (playerSelection === "scissors" && computerSelection === "paper") ||
-      (playerSelection === "rock" && computerSelection === "scissors")
+      console.log(computerTally);
+    } else if (outcome === "You win!"
     ) {
-      console.log("You win!");
       playerTally++;
-    } else {
-      console.log("Draw!");
+      console.log(playerTally);
     }
   }
   if (playerTally > computerTally) {
