@@ -9,7 +9,6 @@ function playFirstToThree() {
     );
     const computerSelection =
       choices[Math.floor(Math.random() * choices.length)];
-
     if (
       (playerSelection === "rock" && computerSelection === "paper") ||
       (playerSelection === "paper" && computerSelection === "scissors") ||
@@ -24,7 +23,6 @@ function playFirstToThree() {
     ) {
       console.log("You win!");
       playerTally++;
-      console.log(playerTally);
     } else {
       console.log("Draw!");
     }
