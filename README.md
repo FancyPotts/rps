@@ -8,6 +8,6 @@
   - &#x2611; user input vs computer
   - &#x2611; return win, lose, draw based on input
 - &#x2611; create function to play 5 rounds
-- Modify function to continue game until one side wins at least 3 games.
-- Modify to change input to all lower-case.
+- &#x2611; function to continue game until one side wins at least 3 games.
+- &#x2611; to change input to all lower-case.
 - Continue to ask for input if input is other than what is listed in array.
