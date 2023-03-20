@@ -5,6 +5,9 @@ function toLower(string) {
 
 function game() {
   const choices = ["rock", "paper", "scissors"];
+  const draw = "Draw!";
+  const win = "You win!";
+  const lose = "You lose!";
   const playerSelection = toLower(prompt(
     "Choose your weapon: rock, paper or scissors."
   ));
@@ -14,15 +17,18 @@ function game() {
     playerSelection === computerSelection ||
     playerSelection === computerSelection
   ) {
-    return "Draw! Try again.";
+    console.log(draw)
+    return draw;
   } else if (
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper") ||
     (playerSelection === "rock" && computerSelection === "scissors")
   ) {
-    return "You win!";
+    console.log(win)
+    return win;
   } else {
-    return "You lose!";
+    console.log(lose)
+    return lose;
   }
 }
 
@@ -32,7 +38,6 @@ function playFirstToThree() {
   let computerTally = 0;
   while (playerTally !== 3 && computerTally !== 3) {
     let outcome = game();
-    console.log(outcome);
     if (outcome === "You lose!") {
       computerTally++;
     } else if (outcome === "You win!") {
