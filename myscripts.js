@@ -34,7 +34,7 @@ function game(playerSelection) {
   } else if (computerTally === 5 && playerTally < 5) {
     outcomeElement.textContent =
       "The computer got to five first! You lose!";
-  } else if (computerTally > 5 || playerTally > 5) {
+  } else if (computerTally >= 5 || playerTally >= 5) {
     outcomeElement.textContent =
       "Uhhh the game ended already... But you keep doing you.";
   }
@@ -53,5 +53,5 @@ resetButton.addEventListener("click", function () {
   playerTally = 0;
   computerTally = 0;
   scoreDiv.innerHTML = `Your score: ${playerTally} | Computer score: ${computerTally}`;
-  outcomeElement.textContent = 'Game reset! Let\'s do this again!';
+  outcomeElement.textContent = 'Game reset! Let\'s gooooooo!';
 });
