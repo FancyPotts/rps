@@ -1,7 +1,8 @@
 let playerTally = 0;
 let computerTally = 0;
 const scoreDiv = document.getElementById("score");
-const resetButton = document.getElementById("reset")
+const resetButton = document.getElementById("reset");
+
 function game(playerSelection) {
   const choices = ["rock", "paper", "scissors"];
   const draw = "Draw!";
@@ -13,41 +14,42 @@ function game(playerSelection) {
     playerSelection === computerSelection ||
     playerSelection === computerSelection
   ) {
-    outcomeMessage = draw
+    outcomeMessage = draw;
   } else if (
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissors" && computerSelection === "paper") ||
     (playerSelection === "rock" && computerSelection === "scissors")
   ) {
-    outcomeMessage = win
+    outcomeMessage = win;
     playerTally++;
   } else {
-    outcomeMessage = lose
+    outcomeMessage = lose;
     computerTally++;
   }
-  let outcomeElement = document.getElementById('outcome');
+  let outcomeElement = document.getElementById("outcome");
   outcomeElement.textContent = outcomeMessage;
   scoreDiv.innerHTML = `Your score: ${playerTally} | Computer score: ${computerTally}`;
-  if (playerTally === 5 && computerTally < 5){
-    outcomeElement.textContent = 'You\'re the first to five! Congratulations!';
+  if (playerTally === 5 && computerTally < 5) {
+    outcomeElement.textContent = "You're the first to five! Congratulations!";
   } else if (computerTally === 5 && playerTally < 5) {
-    outcomeElement.textContent = 'The computer got to five first! Sorry you lose!';
+    outcomeElement.textContent =
+      "The computer got to five first! Sorry you lose!";
   } else if (computerTally > 5 || playerTally > 5) {
-    outcomeElement.textContent = 'Uhhh the game ended already... But you keep doing you.';
+    outcomeElement.textContent =
+      "Uhhh the game ended already... But you keep doing you.";
   }
 }
 
-
-document.getElementById("rock").addEventListener("click", function() {
-  game("rock")
+document.getElementById("rock").addEventListener("click", function () {
+  game("rock");
 });
-document.getElementById("paper").addEventListener("click", function() {
-  game("paper")
+document.getElementById("paper").addEventListener("click", function () {
+  game("paper");
 });
-document.getElementById("scissors").addEventListener("click", function() {
-  game("scissors")
+document.getElementById("scissors").addEventListener("click", function () {
+  game("scissors");
 });
-resetButton.addEventListener("click", function() {
+resetButton.addEventListener("click", function () {
   playerTally = 0;
   computerTally = 0;
   scoreDiv.innerHTML = `Your score: ${playerTally} | Computer score: ${computerTally}`;
